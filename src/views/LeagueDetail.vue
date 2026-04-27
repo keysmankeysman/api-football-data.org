@@ -73,7 +73,7 @@ onMounted(async () => {
     ])
 
     league.value = leagueData
-    teams.value = teamsData.slice(0, 20) // Показываем первые 20 команд
+    teams.value = teamsData.slice(0, 20) 
   } catch (err) {
     console.error(err)
     error.value = 'Не удалось загрузить данные о лиге'

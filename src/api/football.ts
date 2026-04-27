@@ -7,10 +7,8 @@ const apiClient = axios.create({
     timeout: 10000
 })
 
-// Интерсептор для добавления заголовков
 apiClient.interceptors.request.use(
     (config) => {
-        // Токен уже добавляется через proxy в vite.config.ts
         console.log(`📤 ${config.method?.toUpperCase()} ${config.url}`)
         return config
     },
