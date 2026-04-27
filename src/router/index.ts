@@ -31,7 +31,6 @@ const router = createRouter({
   ]
 })
 
-// Guard для защиты роутов
 router.beforeEach((to, from, next) => {
   const token = localStorage.getItem('jwt_token')
 

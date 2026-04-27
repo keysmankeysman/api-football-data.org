@@ -7,11 +7,8 @@ export const useAuthStore = defineStore('auth', () => {
 
     const isAuthenticated = computed(() => !!token.value)
 
-    // Простая имитация JWT (в реальном проекте отправляйте запрос на бэкенд)
     const login = async (email: string, password: string) => {
-        // Имитация API запроса
         if (email === 'test@example.com' && password === '123456') {
-            // Создаем фейковый JWT токен
             const fakeToken = btoa(JSON.stringify({
                 email,
                 exp: Date.now() + 3600000

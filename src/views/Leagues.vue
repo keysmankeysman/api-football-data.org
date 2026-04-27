@@ -52,7 +52,6 @@ const loadLeagues = async () => {
 
   try {
     const data = await footballApi.getCompetitions()
-    // Фильтруем только футбольные лиги (type: LEAGUE или CUP)
     leagues.value = data.filter((comp) => comp.type === 'LEAGUE').slice(0, 20)
   } catch (err) {
     console.error(err)
